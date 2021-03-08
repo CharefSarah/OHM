@@ -1,0 +1,40 @@
+body html {
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+}
+
+h1 {
+	color: #00ffce;
+}
+
+ul {
+
+	float: right;
+
+}
+
+input {
+	margin: 20px !important;
+	margin-right: 50px !important;
+	background-color: #00ffce;
+	border: none;
+	width: 300px;
+}
+
+#input1 {
+	margin-top: 60px !important;
+}
+
+a {
+	color: rgb(0, 0, 0) !important;
+}
+
+h2{
+    text-align: center;
+    margin: 20px;
+}
+
+.text{
+   padding:30px;
+}
