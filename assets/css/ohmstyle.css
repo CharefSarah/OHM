@@ -1,40 +1,49 @@
-body html {
-	margin: 0;
+body,
+html {
 	padding: 0;
-	overflow-y: hidden;
-}
-
-h1 {
-	color: #00ffce;
-}
-
-ul {
-
-	float: right;
+	margin: 0;
+	width: 100%;
+	background-image: url(../assets/img/carhome.png);
 
 }
 
-input {
-	margin: 20px !important;
-	margin-right: 50px !important;
-	background-color: #00ffce;
-	border: none;
-	width: 300px;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+
+#inputEmail4 {
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+	overflow-y: hidden !important;
+
 }
 
-#input1 {
-	margin-top: 60px !important;
+h2,
+.text {
+	color: rgb(0, 0, 0);
+	margin-top: 30px;
+	padding: 30px;
+	text-align: center;
 }
 
-a {
-	color: rgb(0, 0, 0) !important;
+.form {
+	overflow-y: hidden !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: none !important;
 }
 
-h2{
-    text-align: center;
-    margin: 20px;
-}
+.neon1, .neon2, .neon3, .neon4 {
+	color: #fff;
+    margin: 10px;
+	font-size: 30px;}
 
-.text{
-   padding:30px;
+.neon1:hover  .neon1 {
+	color: #fff;
+	text-shadow:
+		0 0 20px  #fff,
+		0 0 80px  #00ffdb,
+		0 0 120px #00ffdb,
+		0 0 150px #00ffdb,
+		0 0 200px #00ffdb;
+	margin: 10px;
+	font-size: 30px;
 }

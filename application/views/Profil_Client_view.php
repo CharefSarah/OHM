@@ -41,68 +41,8 @@
         </div>
     </nav>
     <!-- FIN NAVBAR-->
-    <!-- SELECT-->
-
-    <div class=" form row justify-content-end">
-        <div class=" col-md-4">
-            <input type="date" class="form-control" id="inputEmail4" placeholder="Jour de départ">
-            <input type="time" class="form-control" id="inputEmail4" placeholder="Heure de départ">
-            <input type="date" class="form-control" id="inputEmail4" placeholder="Jour de retour">
-            <input type="time" class="form-control" id="inputEmail4" placeholder="Heure de retour">
-            <div class="d-flex justify-content-end"> <button type="button" class="btn ">Primary</button></div>
-        </div>
-    </div>
-
-    <!-- FIN NAVBAR-->
-    <!-- CAROUSEL-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
-                <div class="carousel-caption  d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- CAROUSEL-->
-    <!--ABOUT -->
-    <div>
-        <h2> fbloblobloblo</h2>
-        <P class='text'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-            eum harum corrupti dicta, aliquam sequi voluptate quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-            eum harum corrupti dicta, aliquam sequi voluptate quas. </P>
-    </div>
-    <!--ABOUT -->
-    <!--FOOTER-->
-    <footer class="bg-dark text-center text-white">
+ <!--FOOTER-->
+ <footer class="bg-dark text-center text-white">
         <div class="container p-4">
             <section class="mb-4">
                 <a href="#!" role="button"><i class="neon1 icon_image bi bi-instagram"></i></a>

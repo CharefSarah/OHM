@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/ohmstyle.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/Form_register_style.css') ?>">
 </head>
 
 <body>
@@ -23,84 +23,63 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">ABOUT </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">LOCATIONS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ABONNEMENT</a>
+                    <li>
+                        <a class="btn btn-outline-dark btn-floating m-1" href="<?php echo base_url() ?>index.php/Ohm_HomePage_Controllers/index" role="button">ACCUEIL</a>
                     </li>
                     <li>
-
-                        <a class="btn btn-outline-dark " href="<?php echo base_url() ?>index.php/Connexion_Client_controllers/index" role="button">Compte</a>
+                        <a class="btn btn-outline-dark btn-floating m-1" href="<?php echo base_url() ?>index.php/Connexion_Client_Controllers/index" role="button">CONNEXION</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- FIN NAVBAR-->
-    <!-- SELECT-->
-
-    <div class=" form row justify-content-end">
-        <div class=" col-md-4">
-            <input type="date" class="form-control" id="inputEmail4" placeholder="Jour de départ">
-            <input type="time" class="form-control" id="inputEmail4" placeholder="Heure de départ">
-            <input type="date" class="form-control" id="inputEmail4" placeholder="Jour de retour">
-            <input type="time" class="form-control" id="inputEmail4" placeholder="Heure de retour">
-            <div class="d-flex justify-content-end"> <button type="button" class="btn ">Primary</button></div>
+<h3>Création compte client</h3>
+    <div class=" container-fluid">
+        <div class=" form-group">
+            <input type="text" class="form-control" placeholder="NOM">
         </div>
-    </div>
-
-    <!-- FIN NAVBAR-->
-    <!-- CAROUSEL-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="PRENOM">
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
+        <div class="form-group">
+            <input type="text" class="form-control" " placeholder=" ADRESSE">
+        </div>
+        <div class="form-row ">
+            <div class="row">
+                <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="CODE POSTALE">
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
-                <div class="carousel-caption  d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
+                <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="Ville">
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <div class=" form-group">
+            <input type="text" class="form-control" placeholder="MAIL">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="TELEPHONE">
+        </div>
+        <div class="form-row ">
+            <div class="row">
+                <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="DATE DE NAISSANCE">
+                </div>
+                <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="OPTENTION DU PERMIS">
+                </div>
+            </div>
+        </div>
+        </form>
+        <div class=" form-group">
+            <input type="text" class="form-control" placeholder="MOT DE PASSE">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id placeholder="VERIFICATION DU MOT DE PASSE">
+        </div>
+        <div class="d-flex justify-content-center"> <button type="button" class="btn ">Primary</button></div>
     </div>
-    <!-- CAROUSEL-->
-    <!--ABOUT -->
-    <div>
-        <h2> fbloblobloblo</h2>
-        <P class='text'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-            eum harum corrupti dicta, aliquam sequi voluptate quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-            eum harum corrupti dicta, aliquam sequi voluptate quas. </P>
-    </div>
-    <!--ABOUT -->
     <!--FOOTER-->
     <footer class="bg-dark text-center text-white">
         <div class="container p-4">
@@ -137,10 +116,13 @@
             </div>
             © 2021 Copyright SARAH CHAREF | OHM est une filiale de LOCA-AUTO
             <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/legalmention_controllers/index" role="button"></a>
-            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/Profil_Client_controllers/index" role="button"></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/Form_Register_controllers/index" role="button"></a>
         </div>
 
     </footer>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>
