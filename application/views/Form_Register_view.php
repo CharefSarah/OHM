@@ -36,50 +36,154 @@
     <!-- FIN NAVBAR-->
 <h3>Création compte client</h3>
     <div class=" container-fluid">
-        <div class=" form-group">
-            <input type="text" class="form-control" placeholder="NOM">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="PRENOM">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" " placeholder=" ADRESSE">
-        </div>
-        <div class="form-row ">
-            <div class="row">
-                <div class="form-group col-6">
-                    <input type="text" class="form-control" placeholder="CODE POSTALE">
+    <form method="post" action="<?php echo base_url() ?>index.php/Form_Register_controllers/form_validation">
+    <?php
+            // On charge la library Form_validation
+            $this->load->library('form_validation');
+
+            // On verifie si l'url contient le segment 2 pour adapté le message
+            if ($this->uri->segment(2) == "inserted") {
+                //base url - http://localhost/tutorial/codeigniter  
+                //redirect url - http://localhost/tutorial/codeigniter/main/inserted  
+                //main - segment(1)  
+                //inserted - segment(2)  
+                echo '<p class="text-success">Profil Client créé avec succés</p>';
+            }
+            if ($this->uri->segment(2) == "updated") {
+                echo '<p class="text-success">Profils modifé avec succés</p>';
+            }
+            ?>
+            <!-- form -->
+            <?php
+            if (isset($user_data)) {
+                foreach ($user_data->result() as $row) {
+            ?>
+
+                        <div class="form-group">
+                        <label>Nom : </label>
+                        <input type="text" name="lastname" value="<?php echo $row->lastname; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("lastname"); ?></span>
+                    </div>
+                     <div class="form-group">
+                        <label>Prénom : </label>
+                        <input type="text" name="firstname" value="<?php echo $row->firstname; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("firstname"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Adresse : </label>
+                        <input type="text" name="adress" value="<?php echo $row->adress; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("adress"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Code postal : </label>
+                        <input type="text" name="zipcode" value="<?php echo $row->zipcode; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("zipcode"); ?></span>
+                    </div>
+                    <div class="form-group">
+                    <label>Ville : </label>
+                    <input type="text" name="city" class="form-control" value="<?php echo $row->city; ?>" class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("city"); ?></span>
                 </div>
-                <div class="form-group col-6">
-                    <input type="text" class="form-control" placeholder="Ville">
+                <div class="form-group">
+                    <label>Mail : </label>
+                    <input type="text" name="mail" class="form-control"  value="<?php echo $row->mail; ?>" class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("mail"); ?></span>
                 </div>
+                <div class="form-group">
+                    <label>Numéro de téléphone : </label>
+                    <input type="text" name="phone" class="form-control"  value="<?php echo $row->phone; ?>" class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("phone"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Date de naissance: </label>
+                    <input type="date" name="birthdate" class="form-control"  value="<?php echo $row->birthdate; ?>" class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("birthdate"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Date d'optention du permis: </label>
+                    <input type="date" name="licence" class="form-control"  value="<?php echo $row->licence; ?>" class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("licence"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe: </label>
+                    <input type="password" name="password" class="form-control"  value="<?php echo $row->password; ?>" class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("password"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Vérification du mot de passe: </label>
+                    <input type="text" name="passwordVerif" class="form-control"  value="<?php echo $row->passwordVerif; ?>" class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("passwordVerif"); ?></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="insert" value="Creer" class="btn btn-info" />
+                </div>
+                <?php
+                }
+            } else {
+                ?>
+
+<div class="form-group">
+                        <label>Nom : </label>
+                        <input type="text" name="lastname" />
+                        <span class="text-danger"><?php echo form_error("lastname"); ?></span>
+                    </div>
+                     <div class="form-group">
+                        <label>Prénom : </label>
+                        <input type="text" name="firstname" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("firstname"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Adresse : </label>
+                        <input type="text" name="adress" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("adress"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Code postal : </label>
+                        <input type="text" name="zipcode" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("zipcode"); ?></span>
+                    </div>
+                    <div class="form-group">
+                    <label>Ville : </label>
+                    <input type="text" name="city" class="form-control" class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("city"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Mail : </label>
+                    <input type="text" name="mail" class="form-control"  class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("mail"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Numéro de téléphone : </label>
+                    <input type="text" name="phone" class="form-control"  class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("phone"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Date de naissance: </label>
+                    <input type="date" name="birthdate" class="form-control"   class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("birthdate"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Date d'obtention du permis: </label>
+                    <input type="date" name="licence" class="form-control"  class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("licence"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe: </label>
+                    <input type="text" name="password" class="form-control"  class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("password"); ?></span>
+                </div>
+                <div class="form-group">
+                    <label>Vérification du mot de passe: </label>
+                    <input type="text" name="passwordVerif" class="form-control"  class="form-control" /> 
+                    <span class="text-danger"><?php echo form_error("passwordVerif"); ?></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="insert" value="Creer" class="btn btn-info" />
+                </div>
+                <?php
+            }
+            ?>
             </div>
-        </div>
-        <div class=" form-group">
-            <input type="text" class="form-control" placeholder="MAIL">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="TELEPHONE">
-        </div>
-        <div class="form-row ">
-            <div class="row">
-                <div class="form-group col-6">
-                    <input type="text" class="form-control" placeholder="DATE DE NAISSANCE">
-                </div>
-                <div class="form-group col-6">
-                    <input type="text" class="form-control" placeholder="OPTENTION DU PERMIS">
-                </div>
-            </div>
-        </div>
-        </form>
-        <div class=" form-group">
-            <input type="text" class="form-control" placeholder="MOT DE PASSE">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" id placeholder="VERIFICATION DU MOT DE PASSE">
-        </div>
-        <div class="d-flex justify-content-center"> <button type="button" class="btn ">Primary</button></div>
-    </div>
     <!--FOOTER-->
     <footer class="bg-dark text-center text-white">
         <div class="container p-4">
@@ -122,7 +226,18 @@
     </footer>
 
 
-
+    <script>
+            $(document).ready(function() {
+                $('.delete_data').click(function() {
+                    var id = $(this).attr("id");
+                    if (confirm("Confirmer la suppression ?")) {
+                        window.location = "<?php echo base_url(); ?>Form_Clients/delete_data/" + id;
+                    } else {
+                        return false;
+                    }
+                });
+            });
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>

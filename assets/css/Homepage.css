@@ -1,0 +1,112 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+
+body,
+html {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background-image: url(../assets/img/carhome.png);
+
+}
+
+.col-md-6 {
+	margin: 0;
+	padding: 0;
+	background-color:rgb(0, 230, 153)!important;
+}
+.col-md-6 {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(115, 255, 0)!important;
+}
+.col-md-2 {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(255, 0, 170)!important;
+}
+
+nav {
+	background-color: rgb(0, 0, 0) !important;
+}
+
+.navbar-brand {
+	color: #ffffff !important;
+	font-family: Hanson-Bold !important;
+}
+
+a {
+	color: #ffffff !important;
+}
+
+#btnNav {
+	background-color: #ffffff;
+	color: rgb(7, 7, 7) !important;
+}
+
+
+
+
+#inputEmail1 {
+	margin-top: 70px !important;
+	margin-bottom: 30px !important;
+	overflow-y: hidden !important;}
+
+#inputEmail4{
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+	overflow-y: hidden !important;
+	
+}
+input{
+	background-color: #ff5e00!important;
+	border-color: #0387da!important; 
+}
+
+h2,
+.text {
+	color: rgb(255, 166, 0);
+	margin-top: 30px;
+	padding: 30px;
+	text-align: center;
+	font-family: Acumin;
+}
+
+.form {
+	overflow-y: hidden !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: none !important;
+}
+
+.neon1,
+.neon2,
+.neon3,
+.neon4 {
+	color: #fff;
+	margin: 10px;
+	font-size: 30px;
+}
+
+.neon1:hover .neon1 {
+	color: #fff;
+	text-shadow:
+		0 0 20px #fff,
+		0 0 80px #0387da,
+		0 0 120px #006eb1,
+		0 0 150px #006eb1,
+		0 0 200px #006eb1;
+	margin: 10px;
+	font-size: 30px;
+}
+
+@font-face {
+	font-family: Hanson-Bold;
+	src: url("../fonts/Hanson-Bold.otf") format("OpenType");
+}
+
+.navbar-brand {
+	font-family: Acumin;
+	font-size: 50px;
+
+
+}

@@ -1,17 +1,17 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Form_Register_controllers extends CI_Controller
+class Profil_Clients_controllers extends CI_Controller
 {
   public function index()
   {
   //  $this->load->helper('link_tag');
     $this->load->helper('url');
-    $this->load->model('Form_Register_models');
+    $this->load->model('Profil_Client_models');
    // Creation d'un tableau $data avec les données
    $data["fetch_data"] = $this->Form_Register_models->fetch_data();
    // Chargement de la vue
-   $this->load->view("Form_Register_view", $data);
+   $this->load->view("Profil_Clientr_view", $data);
 }
 public function form_validation()
 {
@@ -34,7 +34,7 @@ public function form_validation()
    if ($this->form_validation->run()) {
        //true  
        // On charge le modele 
-       $this->load->model("Form_Register_models");
+       $this->load->model("Profil_Clients_models");
 
        // On rempli le tableau data avec les inputs
        $data = array(
@@ -54,7 +54,7 @@ public function form_validation()
 
        if ($this->input->post("update")) {
            $this->add_patient_models->update_data($data, $this->input->post("hidden_id"));
-           redirect(base_url() . "Form_Register_controllers/updated");
+           redirect(base_url() . "a/updated");
        }
        if ($this->input->post("insert")) {
            $this->Form_Register_models->insert_data($data);
@@ -96,4 +96,3 @@ public function updated()
    $this->index();
 }
 }
-

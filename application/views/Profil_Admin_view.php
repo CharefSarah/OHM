@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OHM</title>
+    <meta name="description" content="Site de location de voiture electrique">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/ohmstyle.css') ?>">
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">OHM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">ABOUT </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LOCATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABONNEMENT</a>
+                    </li>
+                    <li>
+
+                        <a class="btn btn-outline-dark " href="<?php echo base_url() ?>index.php/Connexion_Client_controllers/index" role="button">Compte</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- FIN NAVBAR-->
+    
+<h3>VOTRE PROFIL ADMIN</h3>
+    <div class=" container-fluid">
+        <div class=" form-group">
+            <input type="text" class="form-control" placeholder="NOM">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="PRENOM">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" " placeholder=" ADRESSE">
+        </div>
+        <div class="form-row ">
+            <div class="row">
+                <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="CODE POSTALE">
+                </div>
+                <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="Ville">
+                </div>
+            </div>
+        </div>
+        <div class=" form-group">
+            <input type="text" class="form-control" placeholder="MAIL">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="TELEPHONE">
+        </div>
+        <div class="form-row ">
+            <div class="row">
+                <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="DATE DE NAISSANCE">
+                </div>
+                <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="OPTENTION DU PERMIS">
+                </div>
+            </div>
+        </div>
+        </form>
+        <div class=" form-group">
+            <input type="text" class="form-control" placeholder="MOT DE PASSE">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id placeholder="VERIFICATION DU MOT DE PASSE">
+        </div>
+        <div class="d-flex justify-content-center"> <button type="button" class="btn ">Primary</button></div>
+    </div>
+    <button type="button" class="btn btn-primary">EFFACER LE PROFIL</button>
+<button type="button" class="btn btn-secondary">MODIFIER LE PROFIL</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+ <!--FOOTER-->
+ <footer class="bg-dark text-center text-white">
+        <div class="container p-4">
+            <section class="mb-4">
+                <a href="#!" role="button"><i class="neon1 icon_image bi bi-instagram"></i></a>
+                <a href="#!" role="button"><i class="neon2 icon_imagebi bi-facebook"></i></a>
+                <a href="#!" role="button"><i class="neon3 icon_imagebi bi-twitter"></i></a>
+                <a href="#!" role="button"><i class="neon4 icon_imagebi bi-youtube"></i></a>
+            </section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+            </div>
+            © 2021 Copyright SARAH CHAREF | OHM est une filiale de LOCA-AUTO
+            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/legalmention_controllers/index" role="button"></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/Profil_Client_controllers/index" role="button"></a>
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</body>
+
+</html>

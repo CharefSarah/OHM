@@ -23,26 +23,107 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">ABOUT </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">LOCATIONS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ABONNEMENT</a>
+                    <li>
+                        <a class="btn btn-outline-dark btn-floating m-1" href="<?php echo base_url() ?>index.php/Ohm_HomePage_Controllers/index" role="button">ACCUEIL</a>
                     </li>
                     <li>
-
-                        <a class="btn btn-outline-dark " href="<?php echo base_url() ?>index.php/Connexion_Client_controllers/index" role="button">Compte</a>
+                        <a class="btn btn-outline-dark btn-floating m-1" href="<?php echo base_url() ?>index.php/Connexion_Client_Controllers/index" role="button">CONNEXION</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- FIN NAVBAR-->
- <!--FOOTER-->
- <footer class="bg-dark text-center text-white">
+    <h3>Votre profil</h3>
+    <div class=" container-fluid">
+        <form method="post" action="<?php echo base_url() ?>index.php/Form_Register_controllers/form_validation">
+            <?php
+            // On charge la library Form_validation
+            $this->load->library('form_validation');
+
+            // On verifie si l'url contient le segment 2 pour adapté le message
+            if ($this->uri->segment(2) == "inserted") {
+                //base url - http://localhost/tutorial/codeigniter  
+                //redirect url - http://localhost/tutorial/codeigniter/main/inserted  
+                //main - segment(1)  
+                //inserted - segment(2)  
+                echo '<p class="text-success">Profil Client créé avec succés</p>';
+            }
+            if ($this->uri->segment(2) == "updated") {
+                echo '<p class="text-success">Profils modifé avec succés</p>';
+            }
+            ?>
+            <!-- form -->
+            <?php
+            if (isset($user_data)) {
+                foreach ($user_data->result() as $row) {
+            ?>
+
+                    <div class="form-group">
+                        <label>Nom : </label>
+                        <input type="text" name="lastname" value="<?php echo $row->lastname; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("lastname"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Prénom : </label>
+                        <input type="text" name="firstname" value="<?php echo $row->firstname; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("firstname"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Adresse : </label>
+                        <input type="text" name="adress" value="<?php echo $row->adress; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("adress"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Code postal : </label>
+                        <input type="text" name="zipcode" value="<?php echo $row->zipcode; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("zipcode"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Ville : </label>
+                        <input type="text" name="city" class="form-control" value="<?php echo $row->city; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("city"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Numéro de téléphone : </label>
+                        <input type="text" name="phone" class="form-control" value="<?php echo $row->phone; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("phone"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Date de naissance: </label>
+                        <input type="date" name="birthdate" class="form-control" value="<?php echo $row->birthdate; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("birthdate"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Date d'optention du permis: </label>
+                        <input type="date" name="licence" class="form-control" value="<?php echo $row->licence; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("licence"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Mot de passe: </label>
+                        <input type="password" name="password" class="form-control" value="<?php echo $row->password; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("password"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Vérification du mot de passe: </label>
+                        <input type="text" name="passwordVerif" class="form-control" value="<?php echo $row->passwordVerif; ?>" class="form-control" />
+                        <span class="text-danger"><?php echo form_error("passwordVerif"); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="update" value="Creer" class="btn btn-info" />
+                    </div>
+                <?php
+                }
+            } else {
+                ?>
+
+         <p>blolbloblo</p>
+            <?php
+            }
+            ?>
+    </div>
+    <!--FOOTER-->
+    <footer class="bg-dark text-center text-white">
         <div class="container p-4">
             <section class="mb-4">
                 <a href="#!" role="button"><i class="neon1 icon_image bi bi-instagram"></i></a>
@@ -77,10 +158,25 @@
             </div>
             © 2021 Copyright SARAH CHAREF | OHM est une filiale de LOCA-AUTO
             <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/legalmention_controllers/index" role="button"></a>
-            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/Profil_Client_controllers/index" role="button"></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/Form_Register_controllers/index" role="button"></a>
         </div>
 
     </footer>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.delete_data').click(function() {
+                var id = $(this).attr("id");
+                if (confirm("Confirmer la suppression ?")) {
+                    window.location = "<?php echo base_url(); ?>Form_Clients/delete_data/" + id;
+                } else {
+                    return false;
+                }
+            });
+        });
+  
+     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>

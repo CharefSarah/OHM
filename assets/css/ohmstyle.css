@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+
 body,
 html {
 	padding: 0;
@@ -7,21 +9,21 @@ html {
 
 }
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
-
 #inputEmail4 {
 	margin-top: 30px !important;
 	margin-bottom: 30px !important;
 	overflow-y: hidden !important;
-
 }
 
 h2,
 .text {
-	color: rgb(0, 0, 0);
+	color: rgb(0, 255, 255);
 	margin-top: 30px;
 	padding: 30px;
 	text-align: center;
+	font-family: Infinity-Regular;
+	src: url("../assets/fonts/Infinity-Regular.otf") format("opentype");
+
 }
 
 .form {
@@ -31,19 +33,28 @@ h2,
 	background-color: none !important;
 }
 
-.neon1, .neon2, .neon3, .neon4 {
+.neon1,
+.neon2,
+.neon3,
+.neon4 {
 	color: #fff;
-    margin: 10px;
-	font-size: 30px;}
+	margin: 10px;
+	font-size: 30px;
+}
 
-.neon1:hover  .neon1 {
+.neon1:hover .neon1 {
 	color: #fff;
 	text-shadow:
-		0 0 20px  #fff,
-		0 0 80px  #00ffdb,
+		0 0 20px #fff,
+		0 0 80px #00ffdb,
 		0 0 120px #00ffdb,
 		0 0 150px #00ffdb,
 		0 0 200px #00ffdb;
 	margin: 10px;
 	font-size: 30px;
+}
+
+@font-face {
+	font-family: Infinity;
+	src: url("../fonts/Infinity-Regular.otf") format("OpenType");
 }
