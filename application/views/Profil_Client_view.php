@@ -34,7 +34,7 @@
         </div>
     </nav>
     <!-- FIN NAVBAR-->
-    <h3>Votre profil</h3>
+    <h3>Modifier votre profil</h3>
     <div class=" container-fluid">
         <form method="post" action="<?php echo base_url() ?>index.php/Form_Register_controllers/form_validation">
             <?php

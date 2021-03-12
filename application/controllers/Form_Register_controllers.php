@@ -2,7 +2,14 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Form_Register_controllers extends CI_Controller
-{
+
+{    public function __construct()
+   {
+      parent::__construct();{
+         $this->load->library('session');
+         
+      }
+   }
   public function index()
   {
   //  $this->load->helper('link_tag');
@@ -12,6 +19,7 @@ class Form_Register_controllers extends CI_Controller
    $data["fetch_data"] = $this->Form_Register_models->fetch_data();
    // Chargement de la vue
    $this->load->view("Form_Register_view", $data);
+
 }
 public function form_validation()
 {
@@ -95,5 +103,5 @@ public function updated()
 {
    $this->index();
 }
-}
 
+}
