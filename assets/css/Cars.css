@@ -1,3 +1,32 @@
-.row{
-    margin-bottom: 30px !important;
+body,
+html {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden !important;
+}
+
+
+
+.row {
+	margin-bottom: 30px !important;
+}
+
+.imgcard {
+	height: 150px !important;
+}
+
+h1,
+p {
+	text-align: center !important;
+}
+
+col-md-8 {
+	padding: 0px!important;
+	margin: 0px !important;
+	overflow-y: hidden !important;
+	background-color: #00303c !important;
+}
+.list-group-item,.media .list-group{
+	background-color: #00303c !important;
+	color: #fff !important
 }

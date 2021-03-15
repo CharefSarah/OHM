@@ -39,26 +39,29 @@
 	<div class="card-body">
 		<h3 class="card-title text-center">Connexion compte client</h3>
 		<div class="card-text">
-			<!--
-			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-			<form>
-				<!-- to error: add class "has-danger" -->
-				<div class="form-group">
-					<input type="email" class="form-control form-control-sm" placeholder="MAIL">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control form-control-sm" placeholder="MOT DE PASSE">
-				</div>
-				<button type="submit" class="d-flex justify-content-center btn btn-primary">CONNEXION</button>
-				
+		
+		<form method="post" action="<?php echo base_url(); ?>index.php/Connexion_Client_controllers/validation">
+                <div class="form-group">
+
+                    <input type="email" name="email" class="form-control inputLogin" value="<?php echo set_value('email'); ?>" placeholder="Mail" />
+                    <span class="text-danger"><?php echo form_error('email'); ?></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control inputLogin" value="<?php echo set_value('password'); ?>" placeholder="Mot de passe" />
+                    <span class="text-danger"><?php echo form_error('password'); ?></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="login" value="Se connecter" class="btn" id="btnLogin" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo base_url(); ?>index.php/register" id="linkRegister">Register</a>
+                </div>
+            </form>
 				<div class="sign-up">
-				Pas encore Membre? <a  href="<?php echo base_url() ?>index.php/Form_Register_controllers/index" >CREER UN COMPTE</a>
+				Pas encore Membre? <a  href="<?php echo base_url() ?>index.php/Form_Register_controllers" >CREER UN COMPTE</a>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
-</div>
+
             <!--FOOTER-->
             <footer class="bg-dark text-center text-white">
         <div class="container p-4">

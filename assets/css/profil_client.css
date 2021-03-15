@@ -1,0 +1,224 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+
+@font-face {
+	font-family: Hanson-Bold;
+	src: url("../fonts/Hanson-Bold.otf") format("OpenType");
+}
+
+body,
+html {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background-color: #2b2b2b !important;
+	color: #fff;
+
+
+
+}
+
+.banner {
+	margin: 0;
+	padding: 0;
+	background-color: #2b2b2b !important;
+}
+
+.divform {
+	margin: 0;
+	padding: 0 !important;
+	background-color: #2b2b2b !important;
+	padding: 5px;
+}
+
+
+nav {
+	background-color: #141414 !important;
+}
+
+
+#btnNav {
+	height: 60px !important;
+	padding: 0;
+}
+
+a {
+	color: rgb(255, 255, 255) !important;
+}
+
+
+#title {
+	color: rgb(0, 0, 0);
+
+	margin-top: 30px;
+	text-align: center;
+	font-family: Hanson-Bold;
+	src: url("../fonts/Hanson-Bold.otf") format("OpenType");
+}
+
+.form {
+	overflow-y: hidden !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: none !important;
+}
+
+.navbar-brand {
+	font-family: hanson;
+	font-size: 50px;
+	color: #fff !important;
+
+}
+
+li {
+	list-style: none;
+
+}
+
+
+
+
+
+h1,
+h3 {
+	text-align: center;
+    margin-top: 20px;
+}
+
+
+.group {
+	position: relative;
+	margin: 45px 0;
+}
+
+
+input {
+	background: #2b2b2b !important;
+	color: #ffffff !important;
+	margin-bottom: 20px !important;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+input:focus~.bar:before,
+textarea:focus~.bar:before {
+	width: 320px;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+
+}
+
+.bar:before {
+	content: "";
+	height: 2px;
+	width: 0;
+	bottom: 0px;
+	position: absolute;
+	background: rgb(2, 255, 221);
+	box-shadow: 0 0 20px rgb(0, 255, 242), inset 0 0 10px rgb(0, 255, 221), 0 2px 0 #181818;
+	transition: 300ms ease all;
+	left: 0%;
+	overflow-y: hidden !important;
+
+}
+
+.button {
+	border: none;
+	box-shadow: 0 5px 50px 0 #15f4ed inset, 0 5px 50px 0 #15f4ed,
+		0 5px 90px 0 #15f4ed inset, 0 90px 70px 0 #15f4ed;
+	border-radius: 10px;
+}
+
+
+.navbar-toggler {
+	border: none;
+}
+
+.navbar-toggler:hover {
+	border-color: #2b2b2b !important;
+	;
+
+}
+
+.input-group-addon {
+
+	color: #ffffff !important;
+}
+
+#textabout {
+	padding: none !important;
+}
+
+ul {
+	padding: 0 !important;
+	margin: 0;
+}
+
+footer {
+	background-color: #141414 !important;
+}
+    a:hover {
+        color: #255784;
+        background: #2196f3;
+        box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+        transition-delay: 1s;
+    }
+
+    a span {
+        position: absolute;
+        display: block;
+    }
+    a span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #2196f3);
+    }
+    a:hover span:nth-child(1) {
+        left: 100%;
+        transition: 1s;
+    }
+    a span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #2196f3);
+    }
+    a:hover span:nth-child(3) {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+    a span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #2196f3);
+    }
+    a:hover span:nth-child(2) {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+    a span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #2196f3);
+    }
+    a:hover span:nth-child(4) {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+    

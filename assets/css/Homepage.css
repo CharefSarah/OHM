@@ -1,112 +1,189 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
-
-body,
-html {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	background-image: url(../assets/img/carhome.png);
-
-}
-
-.col-md-6 {
-	margin: 0;
-	padding: 0;
-	background-color:rgb(0, 230, 153)!important;
-}
-.col-md-6 {
-	margin: 0;
-	padding: 0;
-	background-color: rgb(115, 255, 0)!important;
-}
-.col-md-2 {
-	margin: 0;
-	padding: 0;
-	background-color: rgb(255, 0, 170)!important;
-}
-
-nav {
-	background-color: rgb(0, 0, 0) !important;
-}
-
-.navbar-brand {
-	color: #ffffff !important;
-	font-family: Hanson-Bold !important;
-}
-
-a {
-	color: #ffffff !important;
-}
-
-#btnNav {
-	background-color: #ffffff;
-	color: rgb(7, 7, 7) !important;
-}
-
-
-
-
-#inputEmail1 {
-	margin-top: 70px !important;
-	margin-bottom: 30px !important;
-	overflow-y: hidden !important;}
-
-#inputEmail4{
-	margin-top: 30px !important;
-	margin-bottom: 30px !important;
-	overflow-y: hidden !important;
-	
-}
-input{
-	background-color: #ff5e00!important;
-	border-color: #0387da!important; 
-}
-
-h2,
-.text {
-	color: rgb(255, 166, 0);
-	margin-top: 30px;
-	padding: 30px;
-	text-align: center;
-	font-family: Acumin;
-}
-
-.form {
-	overflow-y: hidden !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	background-color: none !important;
-}
-
-.neon1,
-.neon2,
-.neon3,
-.neon4 {
-	color: #fff;
-	margin: 10px;
-	font-size: 30px;
-}
-
-.neon1:hover .neon1 {
-	color: #fff;
-	text-shadow:
-		0 0 20px #fff,
-		0 0 80px #0387da,
-		0 0 120px #006eb1,
-		0 0 150px #006eb1,
-		0 0 200px #006eb1;
-	margin: 10px;
-	font-size: 30px;
-}
-
-@font-face {
+ @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+ @font-face {
 	font-family: Hanson-Bold;
 	src: url("../fonts/Hanson-Bold.otf") format("OpenType");
 }
+ body,
+ html {
+ 	padding: 0;
+ 	margin: 0;
+ 	width: 100%;
+ 	background-image: url(../assets/img/carhome.png);
 
-.navbar-brand {
-	font-family: Acumin;
-	font-size: 50px;
+ }
+
+ .banner {
+ 	margin: 0;
+ 	padding: 0;
+	 background-color: #141414 !important;
+ }
+
+ .divform {
+ 	margin: 0;
+ 	padding: 0 !important;
+ 	background-color: #2b2b2b !important;
+ 	padding: 5px;
+ }
 
 
+ nav{
+ 	background-color: #141414 !important;
+ }
+
+
+ #btnNav {
+ 	height: 60px !important;
+	 padding:0;
+ }
+
+
+
+ #title {
+ 	color: rgb(0, 0, 0);
+
+ 	margin-top: 30px;
+ 	text-align: center;
+ 	font-family: Hanson-Bold;
+ 	src: url("../fonts/Hanson-Bold.otf") format("OpenType");
+ }
+
+ .form {
+ 	overflow-y: hidden !important;
+ 	margin: 0 !important;
+ 	padding: 0 !important;
+ 	background-color: none !important;
+ }
+
+ .navbar-brand {
+ 	font-family: hanson;
+ 	font-size: 50px;
+ 	color: #fff !important;
+
+ }
+
+ li {
+ 	list-style: none;
+
+ }
+
+
+ *,
+ :before,
+ :after {
+ 	box-sizing: border-box;
+ }
+
+
+ a {
+ 	color: #fff;
+ 	text-decoration: none;
+ }
+
+ 
+ h1 {
+ 	text-align: center;
+ }
+
+
+ .group {
+ 	position: relative;
+ 	margin: 45px 0;
+ }
+
+
+ input {
+ 	background: none;
+ 	color: #ffffff;
+ 	font-size: 18px;
+ 	width: 100%;
+ 	display: block;
+ 	border: none;
+ 	border-radius: 0;
+ 	border-bottom: 1px solid #000000;
+	 padding-left: 15px;
+	 padding-right: 15px;
+ }
+
+ input:focus,
+ textarea:focus {
+ 	outline: none;
+ }
+
+ input:focus~.bar:before,
+ textarea:focus~.bar:before {
+ 	width: 320px;
+ }
+
+ .bar {
+ 	position: relative;
+ 	display: block;
+ 	width: 100%;
+
+ }
+
+ .bar:before {
+ 	content: "";
+ 	height: 2px;
+ 	width: 0;
+ 	bottom: 0px;
+ 	position: absolute;
+ 	background: rgb(2, 255, 221);
+ 	box-shadow: 0 0 20px rgb(0, 255, 242), inset 0 0 10px rgb(0, 255, 221), 0 2px 0 #181818;
+ 	transition: 300ms ease all;
+ 	left: 0%;
+ 	overflow-y: hidden !important;
+
+ }
+
+ .button {
+ 	border: none;
+ 	box-shadow: 0 5px 50px 0 #15f4ed inset, 0 5px 150px 0 #15f4ed,
+ 		0 5px 90px 0 #15f4ed inset, 0 5px 25px 0 #15f4ed;
+ 	border-radius: 10px;
+ }
+
+
+ .navbar-toggler {
+ border: none;
+ }
+
+ .navbar-toggler:hover{
+	border-color: #2b2b2b !important;
+
+	}
+   
+	.input-group-addon{
+		
+		color:#ffffff!important;
+	}
+	#textabout{
+		padding:none!important;
+	}
+ ul{
+		padding:0!important;
+		margin:0;
+	}
+.footer{
+		background-color: #141414 !important;
+	}
+   .infos{
+	   padding:0 !important;
+	   margin:0 !important;
+   }
+   .text{
+	   padding:15px !important;
+	   text-align:center!important;
+   }
+   
+ 
+:hover .button{
+ 	border: none;
+ 	box-shadow: 0 5px 50px 0 #15f4ed inset, 0 5px 150px 0 #15f4ed,
+ 		0 5px 90px 0 #15f4ed inset, 0 5px 25px 0 #15f4ed;
+ 	border-radius: 10px;
+ }
+
+a:hover {
+	color: rgb(2, 255, 221) !important;
+	box-shadow: 0 0 50px rgb(0, 255, 242),
 }

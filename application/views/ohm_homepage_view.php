@@ -16,19 +16,16 @@
 
 <body>
     <!--NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand  navbar-" href="#">OHM</a>
+            <a class="navbar-brand  navbar-" href="<?php echo base_url() ?>index.php/Ohm_HomePage_controllers/index">OHM</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 110px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">LOCATIONS</a>
+                        <a class="nav-link" href="<?php echo base_url() ?>index.php/Cars_controllers/index">LOCATIONS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">ABONNEMENT</a>
@@ -37,36 +34,14 @@
                 <form class="d-flex">
                     <ul class="navbar-nav me-auto my-2 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
-                            <a class="btn " id="btnNav" href="<?php echo base_url() ?>index.php/Connexion_Client_controllers/index" role="button">Compte</a>
+                            <a class="btn " href="<?php echo base_url() ?>index.php/Connexion_Client_controllers/index" role="button"> <img id="btnNav" src="<?php echo base_url('assets/img/compte.png') ?>"></a>
                         </li>
                     </ul>
                 </form>
             </div>
         </div>
     </nav>
-    <!-- FIN NAVBAR-->
-    <!-- SELECT-->
 
-    <div class=" form row justify-content-end">
-        <div class="col-md-6">
-            <h1>blolobolo</h1>
-        </div>
-        <div class="col-md-2">
-            <h2> fbloblobloblo</h2>
-        </div>
-        <div class=" col-md-4">
-            <input type="date" class="form-control" id="inputEmail1" placeholder="Jour de départ">
-            <input type="time" class="form-control" id="inputEmail4" placeholder="Heure de départ">
-            <input type="date" class="form-control" id="inputEmail4" placeholder="Jour de retour">
-            <input type="time" class="form-control" id="inputEmail4" placeholder="Heure de retour">
-            <div class="d-flex justify-content-end">
-                <button type="button" class="btn" id="btnNav">Primary</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- FIN NAVBAR-->
-    <!-- CAROUSEL-->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -75,23 +50,24 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/img/carousel2.png') ?>" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="button btn ">RECHERCHE</button>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/img/carousel1.png') ?>" class="d-block w-100" alt="...">
                 <div class="carousel-caption  d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="button btn ">RECHERCHE</button>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?php echo base_url('assets/img/carohm.png') ?>" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-md-block">
-                    <button type="button" class="btn btn-primary">Primary</button>
+                <img src="<?php echo base_url('assets/img/carousel3.png') ?>" class="d-block w-100" alt="...">
+                <div class="carousel-caption  d-md-block">
+                    <button type="button" class="button btn ">RECHERCHE</button>
                 </div>
             </div>
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -102,55 +78,72 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <!-- CAROUSEL-->
-    <!--ABOUT -->
+
     <div>
-        <h2> fbloblobloblo</h2>
-        <P class='text'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-            eum harum corrupti dicta, aliquam sequi voluptate quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-            eum harum corrupti dicta, aliquam sequi voluptate quas. </P>
-    </div>
-    <!--ABOUT -->
-    <!--FOOTER-->
-    <footer class="bg-dark text-center text-white">
-        <div class="container p-4">
-            <section class="mb-4">
-                <a href="#!" role="button"><i class="neon1 icon_image bi bi-instagram"></i></a>
-                <a href="#!" role="button"><i class="neon2 icon_imagebi bi-facebook"></i></a>
-                <a href="#!" role="button"><i class="neon3 icon_imagebi bi-twitter"></i></a>
-                <a href="#!" role="button"><i class="neon4 icon_imagebi bi-youtube"></i></a>
-            </section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Company Name</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
-                    </div>
-                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+        <div class=" form row justify-content-end">
+            <div class="infos col-md-8">
+                <h2 id="title"> RETROUVEZ NOS SERVICES DISPONIBLES</h2>
+                <p class='text'>
+                    OHM vous propose une large gamme de services de location de véhicules electrique.<br> Nous voulons vous aider dans vos déplacements et vous donner accès aux véhicules correspondant à vos besoins.<br> Retrouvez tous nos services, de la location en aller simple jusqu’à la réservation longue durée.
+            </div>
+            <div class="divform col-md-4">
+                <div class="group ">
+                    <input class='' type="date" placeholder="Input..." autocomplete="off" /><span class="highlight"></span><span class="bar"></span>
+                </div>
+                <div class="group">
+                    <input type="time" placeholder="Input..." autocomplete="off" /><span class="highlight"></span><span class="bar"></span>
+                </div>
+                <div class="group">
+                    <input type="date" placeholder="Input..." autocomplete="off" /><span class="highlight"></span><span class="bar"></span>
+                </div>
+                <div class="group">
+                    <input type="time" placeholder="Input..." autocomplete="off" /><span class="highlight"></span><span class="bar"></span>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                    <button type="button" class="button btn ">RECHERCHE</button>
                 </div>
             </div>
-            © 2021 Copyright SARAH CHAREF | OHM est une filiale de LOCA-AUTO
-            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/legalmention_controllers/index" role="button"></a>
-            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/Profil_Client_controllers/index" role="button"></a>
         </div>
+
+        <!--FOOTER-->
+        <footer class="footer  text-white">
+            <div class="container p-4">
+                <section class="mb-4">
+                    <div>
+                        <a href="#!" role="button"><i class="neon1 icon_image bi bi-instagram"></i></a>
+                        <a href="#!" role="button"><i class="neon2 icon_imagebi bi-facebook"></i></a>
+                        <a href="#!" role="button"><i class="neon3 icon_imagebi bi-twitter"></i></a>
+                        <a href="#!" role="button"><i class="neon4 icon_imagebi bi-youtube"></i></a>
+                    </div>
+                </section>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 item">
+                        <ul>
+                            <h3>Services</h3>
+                            <li><a href="#">Espace agent</a></li>
+                            <li><a href="#">Mention légales</a></li>
+                            <li><a href="#">Conditions particulière de ventes</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4  item">
+                        <h3>About</h3>
+                        <p id="textabout">
+                            OHM est un service de location de voitures<br>
+                            100% electrique, nos batterie testée et vérifiée<br>
+                            OHM est une filiale de LOCA-AUTO.<br>
+                            © 2021 Copyright<br> SARAH CHAREF<br>
+                            <a class="btn btn-outline-light btn-floating m-1" href="<?php echo base_url() ?>index.php/legalmention_controllers/index" role="button"></a>
+                        </p>
+                    </div>
+                    <div class="carte col-md-4 item text">
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
 
     </footer>
 

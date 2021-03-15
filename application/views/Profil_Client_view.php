@@ -27,7 +27,7 @@
                         <a class="btn btn-outline-dark btn-floating m-1" href="<?php echo base_url() ?>index.php/Ohm_HomePage_Controllers/index" role="button">ACCUEIL</a>
                     </li>
                     <li>
-                        <a class="btn btn-outline-dark btn-floating m-1" href="<?php echo base_url() ?>index.php/Connexion_Client_Controllers/index" role="button">CONNEXION</a>
+                    <p align="center"><a href="<?php echo base_url() ?>index.php/Profil_Client_controllers/logout">Logout</a></p>
                     </li>
                 </ul>
             </div>
@@ -35,92 +35,94 @@
     </nav>
     <!-- FIN NAVBAR-->
     <h3>Modifier votre profil</h3>
-    <div class=" container-fluid">
-        <form method="post" action="<?php echo base_url() ?>index.php/Form_Register_controllers/form_validation">
-            <?php
-            // On charge la library Form_validation
-            $this->load->library('form_validation');
+    
+    <!-------------------------------------------------------------->
+    <!-------------------------------------------------------------->
+    <!-------------------------------------------------------------->
+    <div class="container containerProfil" id="profil">
 
-            // On verifie si l'url contient le segment 2 pour adapté le message
-            if ($this->uri->segment(2) == "inserted") {
-                //base url - http://localhost/tutorial/codeigniter  
-                //redirect url - http://localhost/tutorial/codeigniter/main/inserted  
-                //main - segment(1)  
-                //inserted - segment(2)  
-                echo '<p class="text-success">Profil Client créé avec succés</p>';
-            }
-            if ($this->uri->segment(2) == "updated") {
-                echo '<p class="text-success">Profils modifé avec succés</p>';
-            }
-            ?>
-            <!-- form -->
-            <?php
-            if (isset($user_data)) {
-                foreach ($user_data->result() as $row) {
-            ?>
+        <div class="profilTitle">Votre profil : </div>
+        <?php
+        foreach ($fetch_single_data->result() as $row)
+        ?>
 
-                    <div class="form-group">
-                        <label>Nom : </label>
-                        <input type="text" name="lastname" value="<?php echo $row->lastname; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("lastname"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Prénom : </label>
-                        <input type="text" name="firstname" value="<?php echo $row->firstname; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("firstname"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Adresse : </label>
-                        <input type="text" name="adress" value="<?php echo $row->adress; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("adress"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Code postal : </label>
-                        <input type="text" name="zipcode" value="<?php echo $row->zipcode; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("zipcode"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Ville : </label>
-                        <input type="text" name="city" class="form-control" value="<?php echo $row->city; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("city"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Numéro de téléphone : </label>
-                        <input type="text" name="phone" class="form-control" value="<?php echo $row->phone; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("phone"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Date de naissance: </label>
-                        <input type="date" name="birthdate" class="form-control" value="<?php echo $row->birthdate; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("birthdate"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Date d'optention du permis: </label>
-                        <input type="date" name="licence" class="form-control" value="<?php echo $row->licence; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("licence"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Mot de passe: </label>
-                        <input type="password" name="password" class="form-control" value="<?php echo $row->password; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("password"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Vérification du mot de passe: </label>
-                        <input type="text" name="passwordVerif" class="form-control" value="<?php echo $row->passwordVerif; ?>" class="form-control" />
-                        <span class="text-danger"><?php echo form_error("passwordVerif"); ?></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="update" value="Creer" class="btn btn-info" />
-                    </div>
-                <?php
-                }
-            } else {
-                ?>
 
-         <p>blolbloblo</p>
-            <?php
-            }
-            ?>
+        <div class="form-group">
+            <form method="post" action="<?php echo base_url(); ?>index.php/Profil_Clientcontrollers/validation">
+                <div class="form-group">
+                    <label>Nom : </label>
+                    <input type="text" name="user_name" class="form-control" value="<?php echo $row->Lastname; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_name'); ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Prénom : </label>
+                    <input type="text" name="user_firstname" class="form-control" value="<?php echo $row->Firstname; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_firstname'); ?></span>
+                </div>
+
+                <!-- <div class="form-group">
+                    <label>E-mail : </label>
+                    <input type="text" name="user_mail" class="form-control" value="<?php echo $row->MAIL; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_mail'); ?></span>
+                </div> -->
+                <!-- 
+                <div class="form-group">
+                    <label>Mot de passe : </label>
+                    <input type="password" name="user_password" class="form-control" value="<?php echo $row->PASSWORD; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_password'); ?></span>
+                </div> -->
+
+                <div class="form-group">
+                    <label>Ville : </label>
+                    <input type="text" name="user_city" class="form-control" value="<?php echo $row->CITY; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_city'); ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Code Postal : </label>
+                    <input type="text" name="user_zipCode" class="form-control" value="<?php echo $row->ZIPCODE; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_zipCode'); ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label>N° et Rue : </label>
+                    <input type="text" name="user_adresse" class="form-control" value="<?php echo $row->Adress; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_adresse'); ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Telephone : </label>
+                    <input type="text" name="user_tel" class="form-control" value="<?php echo $row->TELEPHONE; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_tel'); ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Date de naissance : </label>
+                    <input type="date" name="user_birthday" class="form-control" value="<?php echo $row->BIRTHDATE; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_birthday'); ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Date d'obtention du permis : </label>
+                    <input type="date" name="user_drivingLicence" class="form-control" value="<?php echo $row->DRIVING_LICENCE; ?>" />
+                    <span class="text-danger"><?php echo form_error('user_drivingLicence'); ?></span>
+                </div>
+
+                <!-- <div class="form-group">
+                    <input type="submit" name="register" value="Modifier" class="btn btn-info" />
+                </div> -->
+                <div class="form-group">
+                    <input type="submit" name="update" value="Mettre a jour" class="btn btn-info" />
+                </div>
+
+
+                <p align="center"><a href="<?php echo base_url() ?>index.php/Profil_Client_controllers/logout">Logout</a></p>
+
+
+        </div>
+
+
     </div>
     <!--FOOTER-->
     <footer class="bg-dark text-center text-white">
@@ -162,7 +164,6 @@
         </div>
 
     </footer>
-
 
     <script>
         $(document).ready(function() {
